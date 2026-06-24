@@ -4,6 +4,7 @@ from config import IMAGEKIT_PRIVATE_KEY, IMAGEKIT_PUBLIC_KEY, IMAGEKIT_URL_ENDPO
 
 imagekit = ImageKit(private_key=IMAGEKIT_PRIVATE_KEY)
 
+# Function to upload_file
 def upload_file(file_bytes: bytes, file_name: str, folder: str = "/", content_type: str='image/png') -> dict:
     response = imagekit.files.upload(
         file=file_bytes,
